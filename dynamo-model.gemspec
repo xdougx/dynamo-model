@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A small libraty to create models to create, update, list, search in the DynamoDB from AWS.}
   spec.description   = %q{Ccom objetivo de agilizar e simplicar o trabalho com o dynamoDB, essa biblioteca vai ajudar a abstrair as funcões do dynamoDB}
-  spec.homepage      = "h "
+  spec.homepage      = "http://github.com/xdougx/dynamo-model"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
