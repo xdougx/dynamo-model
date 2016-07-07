@@ -3,7 +3,7 @@ module Dynamo
     class Client
       attr_accessor :dynamodb, :config
 
-      def initialize(path)
+      def initialize
         @config = Configuration.configure do |conf|
           config.access_key_id = ENV["aws_access_key_id"]
           config.secret_access_key = ENV["aws_secret_access_key"]
