@@ -17,13 +17,8 @@ module Dynamo
       #       production: "http://domain.com.br/api/v1"
       #     }
       #   end
-      def self.configure(&_block)
-        yield(config())
-      end
-
-      # Global settings for Dynamo::Model
-      def self.config
-        @config ||= Dynamo::Model::Configuration.new
+      def self.configure(&block)
+        yield(Dynamo::Model::Configuration.new)
       end
 
       # constructor that set default values

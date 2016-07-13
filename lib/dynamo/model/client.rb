@@ -3,11 +3,11 @@ module Dynamo
     class Client
       attr_accessor :dynamodb, :config
 
-      def initialize(env)
-        @config = Configuration.configure do |conf|
-          config.access_key_id = env["aws_access_key_id"]
-          config.secret_access_key = env["aws_secret_access_key"]
-          config.region = env["aws_region"]
+      def initialize
+        @config = Configuration.configure do |config|
+          config.access_key_id = ENV["aws_access_key_id"]
+          config.secret_access_key = ENV["aws_secret_access_key"]
+          config.region = ENV["aws_region"]
         end
         setup
       end
